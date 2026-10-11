@@ -1,15 +1,6 @@
-<!DOCTYPE html>
+<html>
 <html lang="ru">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1MDLZ9R7B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F1MDLZ9R7B');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeamUp — Find Your Partner</title>
@@ -17,29 +8,41 @@
 </head>
 <body>
 
-  
     <header class="header">
-        <div class="logo">TEAM UP</div>
+        <div class="logo">Team<span class="logo-accent">Up</span></div>
         <nav class="nav">
             <a href="#">About</a>
             <a href="#">Directory</a>
             <a href="#">FAQ</a>
-            <a href="#">More</a>
+            <a href="#" class="nav-dropdown">More <span class="arrow">v</span></a>
         </nav>
-        <button class="btn btn-join-top">Join</button>
+        <button class="btn btn-join-top" id="openModalBtn">Join</button>
     </header>
 
-    
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModalBtn">&times;</button>
+            <div class="modal-header">
+                <div class="modal-logo">Team<span class="logo-accent">Up</span></div>
+            </div>
+            <h2>LOG IN</h2>
+            <form class="modal-form" onsubmit="event.preventDefault();">
+                <input type="text" placeholder="nickname or email" required>
+                <input type="password" placeholder="password" required>
+                <button type="submit" class="btn btn-submit">log in</button>
+            </form>
+        </div>
+    </div>
+
     <section class="hero">
         <div class="container">
             <h1>FIND YOUR<br>NEXT CO-FOUNDER,<br>PARTNER, OR<br>CO-WORKING<br>BUDDY</h1>
         </div>
     </section>
 
-   
     <section class="features text-center">
         <div class="container">
-            <p class="subtitle">FEATURES</p>
+            <p class="subtitle">Features</p>
             <h2>BUILT FOR THE SERIOUS</h2>
             <p class="section-desc">The tools you need to find a true partner.</p>
             
@@ -47,81 +50,77 @@
                 <div class="card feature-card anim-fade-in">
                     <p class="card-tag">Matching</p>
                     <h3>SMART MATCHING</h3>
-                    <p>Algo-driven tool mix complementary skills perfectly.</p>
-                    <a href="#" class="link-more">Learn →</a>
+                    <p>Algorithms find the complementary skills you lack.</p>
+                    <a href="#" class="link-more">Learn &gt;</a>
                 </div>
                 <div class="card feature-card anim-fade-in">
                     <p class="card-tag">Profiles</p>
                     <h3>VERIFIED PROFILES</h3>
-                    <p>No bots. No ghosts. Just real people with real goals.</p>
-                    <a href="#" class="link-more">Learn →</a>
+                    <p>No bots. No ghosts. Just real people with real scars.</p>
+                    <a href="#" class="link-more">Learn &gt;</a>
                 </div>
                 <div class="card feature-card anim-fade-in">
                     <p class="card-tag">Chats</p>
                     <h3>SAFE CHATS</h3>
-                    <p>Talk freely. Your data stays yours until you share more.</p>
-                    <a href="#" class="link-more">Learn →</a>
+                    <p>Talk freely. Your data stays yours until you share them.</p>
+                    <a href="#" class="link-more">Learn &gt;</a>
                 </div>
             </div>
         </div>
     </section>
 
-   
     <section class="builders text-center">
         <div class="container">
-            <p class="subtitle">DIRECTORY</p>
+            <p class="subtitle">Directory</p>
             <h2>THE BUILDERS ARE HERE</h2>
             <p class="section-desc">See the people who are ready to work.</p>
 
             <div class="grid grid-3">
-                <div class="card builder-card anim-fade-in">
+                <div class="card builder-card js-tilt anim-fade-in">
                     <h3>ELENA VANCE</h3>
-                    <p class="bio">Backend engineer. Built systems that scale. Looking for a designer.</p>
+                    <p class="bio">Backend engineer. Built systems that scale. Looking for a visionary.</p>
                     <div class="tags">
-                        <span>Python</span><span>AWS</span><span>Django</span>
+                        <span>Python</span><span>AWS</span><span>Fintech</span>
                     </div>
-                    <a href="#" class="link-action">Connect →</a>
+                    <a href="#" class="link-action">Connect &gt;</a>
                 </div>
-                <div class="card builder-card anim-fade-in">
+                <div class="card builder-card js-tilt anim-fade-in">
                     <h3>MARCUS THIEL</h3>
-                    <p class="bio">Product Designer. Obsessed with clean interfaces. Need technical muscle.</p>
+                    <p class="bio">Product designer. Obsessed with clean interfaces. Needs a technical lead.</p>
                     <div class="tags">
                         <span>Figma</span><span>UI/UX</span><span>SaaS</span>
                     </div>
-                    <a href="#" class="link-action">Connect →</a>
+                    <a href="#" class="link-action">Connect &gt;</a>
                 </div>
-                <div class="card builder-card anim-fade-in">
+                <div class="card builder-card js-tilt anim-fade-in">
                     <h3>SARAH JENKINS</h3>
-                    <p class="bio">Growth Marketer. I get the first thousand users. You build the product.</p>
+                    <p class="bio">Growth marketer. I get the first thousand users. You build the product.</p>
                     <div class="tags">
-                        <span>SEO</span><span>Content</span><span>AdWords</span>
+                        <span>SEO</span><span>Content</span><span>Edtech</span>
                     </div>
-                    <a href="#" class="link-action">Connect →</a>
+                    <a href="#" class="link-action">Connect &gt;</a>
                 </div>
             </div>
             <a href="#" class="view-all">View all</a>
         </div>
     </section>
 
-    
     <section class="cta text-center">
         <div class="container">
             <h2>READY TO MEET YOUR<br>PARTNER?</h2>
             <p class="section-desc">The only way to build something that lasts is to start. The right person is waiting.</p>
             <div class="cta-buttons">
-                <button class="btn btn-dark">Join</button>
-                <button class="btn btn-light">Learn</button>
+                <button class="btn btn-dark" id="openModalBtnSecondary">Join</button>
+                <a href="#" class="link-about-cta">About</a>
             </div>
         </div>
     </section>
 
-    
-    <footer class="stats">
+    <section class="stats">
         <div class="container">
-            <p class="subtitle">STATS</p>
+            <p class="subtitle">Stats</p>
             <h2>THE NUMBERS DO NOT LIE</h2>
-            <h1>Hello, world!</h1>
-            <p class="section-desc">A strong ecosystem is growing. The code speaks for itself.</p>
+            <p class="section-desc">A strong movement is growing. The work speaks for itself.</p>
 
             <div class="grid grid-3 stats-grid">
                 <div>
@@ -138,9 +137,42 @@
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <button class="btn btn-dark">Join</button>
-                <a href="#" class="link-more">Learn →</a>
+            <div class="stats-bottom">
+                <button class="btn btn-dark" id="openModalBtnTertiary">Join</button>
+                <a href="#" class="link-more">Learn &gt;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Jobs</a>
+                <a href="#">Brand</a>
+                <a href="#">Newsroom</a>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="#">Support</a>
+                <a href="#">Safety</a>
+                <a href="#">Blog</a>
+                <a href="#">Creators</a>
+                <a href="#">Community</a>
+                <a href="#">Developers</a>
+                <a href="#">Merch</a>
+                <a href="#">Feedback</a>
+            </div>
+            <div class="footer-column">
+                <h4>Policies</h4>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookie Settings</a>
+                <a href="#">Guidelines</a>
+                <a href="#">Acknowledgements</a>
+                <a href="#">Licenses</a>
+                <a href="#">Company Information</a>
             </div>
         </div>
     </footer>
